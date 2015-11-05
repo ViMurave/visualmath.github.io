@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<meta charset = 'utf-8'/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>VisualMath: Касательные плоскости</title>
+	
+	<link rel='stylesheet' href='../../css/eulerface_layout.css' media='screen' />
+	<link rel='stylesheet' href='../../css/eulerface_inline.css' media='screen' />
+	<link rel='stylesheet' href='../../css/eulerface_select.css' media='screen' />
+	<link rel='stylesheet' href='../lagrange_style.css' media='screen' />
+</head>
+
+<body lang = 'ru'>
+	<header id = 'mainBar'>
+		<nav id = 'siteNav'>
+			<h1 id = 'logo'></h1>
+		</nav>
+		<nav id = 'lessonNav'>
+		</nav>
+	</header>    
+
+	<article class = 'articleContent'>
+		<header id = 'articleHeader'>
+			<h2 id = 'articleTitle'>Касательные плоскости</h2>
+		</header>
+	
+		<figure class = 'visual'>
+			<figure class = 'visualFlex'>
+				<div class = 'aspect'>
+					<div class = 'aspectHolder'></div>
+					<figure id = 'plot3d_main' class = 'subVisual'></figure>
+					<div id = 'control_Y'></div>
+					<figcaption class = 'visualDesc'>
+						<!-- Здесь панель для графиков -->
+					</figcaption>
+				</div>
+			</figure>
+		</figure>        
+		
+		<section class = 'articlePage'>			
+			<div class = 'dynamicBlock'>
+				<div class = 'control' id = 'controlBlock1'>
+					<div id = "options"></div>
+					<div id = "point_opt">
+						<p>Точка касания:
+							x:
+							<input id = "x_input" type = "number" min = "-8.5" max = "5" step = "0.1" value = "0" style = "width:53px">
+							y:
+							<input id = "y_input" type = "number" min = "-8.5" max = "5" step = "0.1" value = "0" style = "width:53px">
+						</p>
+						<p>1-ая точка
+							x:
+							<input id = "x_pt1" type = "number" min = "-8.5" max = "5" step = "0.1" value = "3.5" style = "width:53px">
+							y:
+							<input id = "y_pt1" type = "number" min = "-8.5" max = "5" step = "0.1" value = "0" style = "width:53px">
+						
+							2-ая точка
+							x:
+							<input id = "x_pt2" type = "number" min = "-8.5" max = "5" step = "0.1" value = "0" style = "width:53px">
+							y:
+							<input id = "y_pt2" type = "number" min = "-8.5" max = "5" step = "0.1" value = "3.5" style = "width:53px">
+						</p>
+					</div>
+					<p>
+						Функция:
+						<select id='sel1'></select>
+					</p>
+					<div id='opt-la-1'>
+                        $$ f(x,y) = sin(x) + cos(y) $$ 
+					</div>
+					<div id='opt-la-2'>
+                        $$ f(x,y) = sin(x)cos(y) $$ 
+					</div>
+					<div id='opt-la-3'>
+                        $$ f(x,y) = x sin(y) + y cos(x)$$ 
+					</div>
+					<div id='opt-la-4'>
+                        $$ f(x,y) = x sin(x) + y cos(y) $$ 
+					</div>
+					<div id='opt-la-5'>
+                        $$ f(x,y) = \frac{sin(x+y)}{x+y} $$ 
+					</div>
+					<div id='opt-la-6'>
+                        $$ f(x,y) = \frac{1}{2\pi}e^{-\frac{x^2 + y^2}{2}} $$ 
+					</div>
+				</div>
+				<!-- <div class = 'controlled' id = 'solution1'>
+					<div id = 'solution-la-1'>
+						<p>
+
+						</p>
+					</div>
+					<div id = 'solution-la-2'>
+						<p>
+						</p>
+					</div>
+					<div id = 'solution-la-3'>
+						<p>
+						</p>
+					</div>
+					<div id = 'solution-la-4'>
+						<p>
+						</p>
+					</div>
+					<div id = 'solution-la-5'>
+						<p>
+						</p>
+					</div>
+					<div id = 'solution-la-6'>
+						<p>
+						</p>
+					</div>
+				</div> -->
+			</div>
+		</section>
+		
+	</article>
+	
+    <script src='http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+	<script type='text/x-mathjax-config'>
+		MathJax.Hub.Config({
+			skipStartupTypeset: true,
+			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+			'HTML-CSS': { linebreaks: { automatic: true} }
+		});
+    </script>
+    
+	<script src = '../../js/eulerface.js'></script>
+	<script src = '../../js/select.js'></script>
+    
+	<script src="../TangentialPlanes_problemslist.js"></script>
+	<script src="../../js/grafar.js"></script>
+	<script src="TangentialPlanes.js"></script>
+	
+</body>
+
+</html>
